@@ -3,9 +3,21 @@
 <img src="imgs/attention-title.PNG" width="500" height="300"></img>
 
 ## The Transformer - Model Architecture
-<img src="imgs/transformer-architecture.PNG" width="300" height="700"></img>
--
--
+- Encoder-Decoder Structure
+- Encoder consists of Encoder Block and Decoder consists of Decoder Blocks (in paper: 6 stacks each) <br>
+<img src="imgs/transformer-architecture.PNG" width="400" height="500"></img>
+
+## (1) Embedding - Positional Embedding
+
+## (2) Multi-Head Attention
+
+## (3) Multi-Head Attention
+
+## (4) Encoder Block and Decoder Block
+
+## (5) Encoder
+
+## (6) Decoder
 
 
 **Mechanism of Multi-Head Attention**
