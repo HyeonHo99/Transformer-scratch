@@ -1,8 +1,6 @@
 # Transformer-scratch
-Pytorch Implementation of Transformer
-
-Original Paper : Attention Is All You Need (https://arxiv.org/pdf/1706.03762.pdf)
-
+### Pytorch Implementation of Transformer Model Presented on ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
+<img src="imgs/attention-title" width="500" height="300"></img>
 
 **Model Architecture**
 
