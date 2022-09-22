@@ -1,11 +1,11 @@
 # Transformer-scratch
 ### Pytorch Implementation of Transformer Model Presented on ["Attention Is All You Need"](https://arxiv.org/pdf/1706.03762.pdf)
-<img src="imgs/attention-title" width="500" height="300"></img>
+<img src="imgs/attention-title.PNG" width="500" height="300"></img>
 
-**Model Architecture**
-
-![image](https://user-images.githubusercontent.com/69974410/182133960-f80a645d-e2df-46fc-aa91-1d8a0d5a0af4.png)
-
+## The Transformer - Model Architecture
+<img src="imgs/transformer-architecture.PNG" width="300" height="700"></img>
+-
+-
 
 
 **Mechanism of Multi-Head Attention**
