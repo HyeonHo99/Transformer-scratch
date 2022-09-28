@@ -40,6 +40,31 @@ class PositionalEmbedding(nn.Module):
 #### To Be Updated
 
 ## (2) Multi-Head Attention
+![image](https://user-images.githubusercontent.com/69974410/192866422-28bdc367-8fe4-4678-8de5-f4f69828b8c4.png) <br>
+- Left figure shows the mechanism of Scaled Dot-Product Attention, which we will use.<br>
+Unlike the case of Encoder block, in Decoder block, we need the 'Mask' layer to maken values in <b>Unseen Tokens</b> to have impact on Attention operation. Transformer here is a sequence-to-sequence model and the decoder should not be given any information about later coming tokens during attention operation.
+- Right figure is described in *MultiHeadAttention class* in MultiHeadAttention.py file. Let's take a look with the code.
+```python
+class PositionalEmbedding(nn.Module):
+    def __init__(self, max_len, d_model, device):
+        super(PositionalEmbedding, self).__init__()
+
+        self.encoding = torch.zeros(max_len, d_model, device=device)
+        self.encoding.requires_grad = False
+
+        _t = torch.arange(0, max_len, device=device)
+        _t = _t.float().unsqueeze(dim=1)
+        _i = torch.arange(0, d_model, step=2, device=device).float()
+
+        self.encoding[:, 0::2] = torch.sin(_t / 10000 ** (_i / d_model))
+        self.encoding[:, 1::2] = torch.cos(_t / 10000 ** (_i / d_model))
+
+    def forward(self, x):
+        ## input shape: [batch_size(N), length(L), embed_size(d_model)]
+        N, L = x.size()
+
+        return self.encoding[:L, :]
+```
 
 ## (3) Encoder Block and Decoder Block
 
