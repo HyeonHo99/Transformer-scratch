@@ -37,7 +37,6 @@ class PositionalEmbedding(nn.Module):
         return self.encoding[:L, :]
 ```
 
-#### To Be Updated
 
 ## (2) Multi-Head Attention
 ![image](https://user-images.githubusercontent.com/69974410/192866422-28bdc367-8fe4-4678-8de5-f4f69828b8c4.png) <br>
@@ -68,8 +67,10 @@ def forward(self, q, k, v, mask):
         q, k, v = self.w_q(q), self.w_k(k), self.w_v(v)
 ```
    
+  
 </ol>
 
+#### To Be Updated
 
 
 ## (3) Encoder Block and Decoder Block
