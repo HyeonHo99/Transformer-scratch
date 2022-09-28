@@ -67,8 +67,7 @@ def forward(self, q, k, v, mask):
 
         q, k, v = self.w_q(q), self.w_k(k), self.w_v(v)
 ```
-    <li></li>
-    <li></li>
+   
 </ol>
 
 
